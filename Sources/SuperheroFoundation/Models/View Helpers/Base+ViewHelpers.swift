@@ -13,12 +13,17 @@ import ComposableArchitecture
 
 extension Base {
 // MARK: - Environment
-public struct Environment { }
+public struct Environment {
+    
+    public init() {}
+}
 
 // MARK: - State
 public struct State {
     var home = Home.State()
     var search = Search.State()
+    
+    public init() {}
     }
 
 // MARK: - Static Properties

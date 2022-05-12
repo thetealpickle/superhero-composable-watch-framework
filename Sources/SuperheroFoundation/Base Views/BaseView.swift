@@ -15,6 +15,10 @@ import SwiftUI
 public struct BaseView: View {
     let store: Store<Base.State, Base.Action>
     
+    
+    public init(store: Store<Base.State, Base.Action>) {
+        self.store = store
+    }
     public var body: some View {
         WithViewStore(self.store.stateless) { _ in
             GeometryReader { (container: GeometryProxy) in
